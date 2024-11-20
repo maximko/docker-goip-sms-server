@@ -23,3 +23,7 @@ services:
       - goip-sms-server-data:/var/lib/mysql
     restart: unless-stopped
     logging: *default-logging
+    ulimits:
+      nofile:
+        soft: 26677
+        hard: 46677
